@@ -41,7 +41,7 @@ public class EmailsService implements IEmails {
 
      try{
          SimpleMailMessage message = new SimpleMailMessage();
-         message.setFrom("All on 6 Email Server");
+         message.setFrom("crdeveloper506@gmail.com");
          message.setTo(emailInformation.getEmail());
          message.setSubject("Information Request From: "+emailInformation.getName());
          message.setText("Hi there: our system was receive a new message from: "+emailInformation.getName()+"\n"+"" +
