@@ -22,10 +22,10 @@ public class EmailsService implements IEmails {
 
     @Override
     public JavaMailSender getJavaMailSender() {
-        mailSender.setHost("smtp.gmail.com");
+        mailSender.setHost("smtp.office365.com");
         mailSender.setPort(587);
-        mailSender.setUsername("crdevelopers506@gmail.com");
-        mailSender.setPassword("S0p0rt32022.");
+        mailSender.setUsername("karla@freerdentalimplants.com");
+        mailSender.setPassword("39agxpAj#ECDXtQs");
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");
@@ -41,8 +41,8 @@ public class EmailsService implements IEmails {
 
      try{
          SimpleMailMessage message = new SimpleMailMessage();
-         message.setFrom("crdeveloper506@gmail.com");
-         message.setTo(emailInformation.getEmail());
+         message.setFrom("karla@freerdentalimplants.com");
+         message.setTo("karla@freerdentalimplants.com");
          message.setSubject("Information Request From: "+emailInformation.getName());
          message.setText("Hi there: our system was receive a new message from: "+emailInformation.getName()+"\n"+"" +
                  "This are the details about this client: "+"\n"+"_____________________________________________________________"+"\n" +
