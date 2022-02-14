@@ -42,6 +42,7 @@ public class EmailsService implements IEmails {
      try{
          SimpleMailMessage message = new SimpleMailMessage();
          message.setFrom("karla@freerdentalimplants.com");
+         message.setCc("Hola@vostokcr.com");
          message.setTo("karla@freerdentalimplants.com");
          message.setSubject("Information Request From: "+emailInformation.getName());
          message.setText("Hi there: our system was receive a new message from: "+emailInformation.getName()+"\n"+"" +
@@ -52,7 +53,7 @@ public class EmailsService implements IEmails {
                  "I want to be contacted by: "+emailInformation.getTypeContactSelection()+"\n"+
                  "Do I have passport: "+emailInformation.getPassPort()+"\n"+
                  "Procedure that I am interested in: "+emailInformation.getProcedureSelection()+"\n"+
-                 "-----------------------------------------------------------------------------------");
+                 "----------------------------------------- ------------------------------------------");
 
          mailSender.send(message);
 
