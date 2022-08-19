@@ -15,12 +15,7 @@ public class EmailController {
     @Autowired
     EmailsService emailsService;
 
-    @GetMapping
-    public ResponseEntity<?> GetMessageTest(){
-
-        return new ResponseEntity<>("Test de get", HttpStatus.OK);
-    }
-
+   
     @PostMapping()
     @ResponseBody()
     public ResponseEntity<?> PostEmail(@RequestBody EmailDTO userInfo){
